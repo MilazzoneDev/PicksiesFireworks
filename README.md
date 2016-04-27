@@ -1,0 +1,2 @@
+# PicksiesFireworks
+Twitch Fireworks Simulator
