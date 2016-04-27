@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{A01040E3-75A5-F048-3834-82614C368B2C}") = "Picksies Fireworks", "Assembly-CSharp-firstpass.csproj", "{7BDE58BA-02FC-FE1C-19C3-21DEFC781770}"
+EndProject
+Project("{A01040E3-75A5-F048-3834-82614C368B2C}") = "Picksies Fireworks", "Assembly-CSharp.csproj", "{961FD4AD-6341-3A69-1F8B-DE80D43BC192}"
+EndProject
+Project("{A01040E3-75A5-F048-3834-82614C368B2C}") = "Picksies Fireworks", "Assembly-CSharp-Editor.csproj", "{A8E5D733-3E92-590F-4015-099361EC02C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BDE58BA-02FC-FE1C-19C3-21DEFC781770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BDE58BA-02FC-FE1C-19C3-21DEFC781770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BDE58BA-02FC-FE1C-19C3-21DEFC781770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BDE58BA-02FC-FE1C-19C3-21DEFC781770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{961FD4AD-6341-3A69-1F8B-DE80D43BC192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{961FD4AD-6341-3A69-1F8B-DE80D43BC192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{961FD4AD-6341-3A69-1F8B-DE80D43BC192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{961FD4AD-6341-3A69-1F8B-DE80D43BC192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8E5D733-3E92-590F-4015-099361EC02C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8E5D733-3E92-590F-4015-099361EC02C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8E5D733-3E92-590F-4015-099361EC02C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8E5D733-3E92-590F-4015-099361EC02C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
