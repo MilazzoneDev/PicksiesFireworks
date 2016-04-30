@@ -97,6 +97,13 @@ public class ColorPicker {
 				returnColor = new Color(Random.value,Random.value,Random.value);
 			}
 		}
+		else if(arg[0].Equals('v'))
+		{
+			if(arg.Equals("vyv"))
+			{
+				returnColor = new Color(152.0f/255.0f,245.0f/255.0f,255.0f/255.0f);
+			}
+		}
 		else if(arg[0].Equals('w'))
 		{
 			if(arg.Equals("white"))

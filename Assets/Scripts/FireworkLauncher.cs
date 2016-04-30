@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class FireworkLauncher : MonoBehaviour {
 
@@ -7,14 +8,24 @@ public class FireworkLauncher : MonoBehaviour {
 
 	public GameObject launcher;
 
+	public Slider autoLauncher;
+	public float secondsPerFirework = 0;
+
+
 	// Use this for initialization
 	void Start () {
-		
+		float autoFireworksPerMinute = autoLauncher.value;
+		float autoFireworksPerSecond = autoFireworksPerMinute/60.0f;
+
+		secondsPerFirework = 1/autoFireworksPerSecond;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void UpdateAutoLauncher() {
+		float autoFireworksPerMinute = autoLauncher.value;
+		float autoFireworksPerSecond = autoFireworksPerMinute/60.0f;
+
+		secondsPerFirework = 1/autoFireworksPerSecond;
 	}
 
 

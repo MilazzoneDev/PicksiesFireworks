@@ -8,10 +8,12 @@ public class OptionsScript : MonoBehaviour {
 	public Vector3 chatPos;
 	public Vector3 withoutChatPos;
 	public Vector3 viewPos;
-	public Vector3 UpPos;
+	public Vector3 upPos;
+	public Vector3 sidePos;
 	[Header("Cam Rotations")]
 	public Vector3 normalRot;
 	public Vector3 upRot;
+	public Vector3 sideRot;
 
 	[Header("screens")]
 	public GameObject optionsMenu;
@@ -78,18 +80,18 @@ public class OptionsScript : MonoBehaviour {
 			cam.clearFlags = CameraClearFlags.Color;
 			cam.backgroundColor = Color.black;
 		}
-		else if(Input.GetAxis("ChromaCam")>0)
+		else if(Input.GetAxis("SideCam")>0)
 		{
-			cam.transform.position = viewPos;
-			cam.transform.rotation = Quaternion.Euler(normalRot);
+			cam.transform.position = sidePos;
+			cam.transform.rotation = Quaternion.Euler(sideRot);
 			SetChat(false);
-			ViewLauncher(false);
+			ViewLauncher(true);
 			cam.clearFlags = CameraClearFlags.Color;
 			cam.backgroundColor = Color.black;
 		}
 		else if(Input.GetAxis("UpCam")>0)
 		{
-			cam.transform.position = UpPos;
+			cam.transform.position = upPos;
 			cam.transform.rotation = Quaternion.Euler(upRot);
 			SetChat(false);
 			ViewLauncher(false);

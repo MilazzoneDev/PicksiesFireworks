@@ -12,6 +12,7 @@ public class FireworkPicker : MonoBehaviour {
 	public GameObject sparkle;
 	public GameObject burst;
 	public GameObject bloom;
+	public GameObject FireworkParent;
 
 	private const string basicText = "basic";
 	private const string unityText = "unity";
@@ -28,8 +29,16 @@ public class FireworkPicker : MonoBehaviour {
 	private ArrayList burstBundle;
 	private ArrayList bloomBundle;
 
+
 	private TwitchParser commands;
 	private FireworkLauncher launcher;
+
+	//used for streamer inputs
+	bool streamerButton = false;
+
+	//used for auto fireworks
+	private float timeSinceLast = 0.0f;
+
 
 	void Start ()
 	{
@@ -44,6 +53,57 @@ public class FireworkPicker : MonoBehaviour {
 		sparkleBundle = new ArrayList();
 		burstBundle = new ArrayList();
 		bloomBundle = new ArrayList();
+	}
+
+	void Update()
+	{
+		float dt = Time.deltaTime;
+		UserMessage streamerCommand = null;
+
+		if(Input.GetAxis("Fire1")>0)
+		{
+			streamerCommand = new UserMessage("streamer","!fire");
+		}
+		else if(Input.GetAxis("Fire2")>0)
+		{
+			streamerCommand = new UserMessage("streamer","!fire",unityText);
+		}
+		else if(Input.GetAxis("Fire3")>0)
+		{
+			streamerCommand = new UserMessage("streamer","!fire", new string[] {trailText,"random","random"});
+		}
+		else if(Input.GetAxis("Fire4")>0)
+		{
+			streamerCommand = new UserMessage("streamer","!fire", new string[] {sparkleText,"random","random"});
+		}
+		else if(Input.GetAxis("Fire5")>0)
+		{
+			streamerCommand = new UserMessage("streamer","!fire", new string[] {burstText,"random","random"});
+		}
+		else if(Input.GetAxis("Fire6")>0)
+		{
+			streamerCommand = new UserMessage("streamer","!fire", new string[] {bloomText,"random","random"});
+		}
+		else
+		{
+			streamerButton = true;
+		}
+
+		if(streamerCommand != null && streamerButton)
+		{
+			OnMessage(streamerCommand);
+			streamerButton = false;
+		}
+
+		//auto launch fireworks
+		timeSinceLast += dt;
+		if(timeSinceLast > launcher.secondsPerFirework)
+		{
+			FireRandomFirework();
+			timeSinceLast = 0;
+		}
+
+
 	}
 
 	void OnMessage(UserMessage cmd)
@@ -119,6 +179,36 @@ public class FireworkPicker : MonoBehaviour {
 			//fire a random basic firework
 			launcher.Launch(GenerateBasicFirework(ColorPicker.pickColor("random"),ColorPicker.pickColor("random")));
 		}
+	}
+
+	void FireRandomFirework()
+	{
+		GameObject firework;
+		Color firstColor = ColorPicker.pickColor("random");
+		Color secondColor = ColorPicker.pickColor("random");
+		int randomInt = (int)(Random.value*6.0f);
+		switch(randomInt)
+		{
+			case 0:
+				firework = GetFirework(unityText);
+				break;
+			case 1:
+				firework = GenerateTrailFirework(firstColor, secondColor);
+				break;
+			case 2:
+				firework = GenerateSparkleFirework(firstColor,secondColor);
+				break;
+			case 3:
+				firework = GenerateBurstFirework(firstColor,secondColor);
+				break;
+			case 4:
+				firework = GenerateBloomFirework(firstColor,secondColor);
+				break;
+			default:
+				firework = GenerateBasicFirework(firstColor,secondColor);
+				break;
+		}
+		launcher.Launch(firework);
 	}
 
 	GameObject GenerateTrailFirework(Color firstColor, Color secondColor)
@@ -322,6 +412,12 @@ public class FireworkPicker : MonoBehaviour {
 			//else return a basic
 			newFirework = Instantiate(basic);
 		}
+
+		if(FireworkParent != null)
+		{
+			newFirework.transform.SetParent(FireworkParent.transform);
+		}
+
 		return newFirework;
 	}
 }
