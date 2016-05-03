@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\HighScoreController.cs" />
      <Compile Include="Assets\Scripts\OptionsScript.cs" />
      <Compile Include="Assets\Scripts\ScoreHolder.cs" />
+     <Compile Include="Assets\Scripts\ScrollingViewer.cs" />
      <Compile Include="Assets\Scripts\SlidingPanel.cs" />
      <Compile Include="Assets\Scripts\SteeringVehicle.cs" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />

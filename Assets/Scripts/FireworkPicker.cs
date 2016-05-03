@@ -13,6 +13,7 @@ public class FireworkPicker : MonoBehaviour {
 	public GameObject burst;
 	public GameObject bloom;
 	public GameObject retro;
+	public GameObject rainbow;
 	public GameObject FireworkParent;
 
 	private const string basicText = "basic";
@@ -22,6 +23,7 @@ public class FireworkPicker : MonoBehaviour {
 	private const string burstText = "burst";
 	private const string bloomText = "bloom";
 	private const string retroText = "8bit";
+	private const string rainbowText = "rainbow";
 
 	//firework bundles
 	private ArrayList basicBundle;
@@ -31,6 +33,7 @@ public class FireworkPicker : MonoBehaviour {
 	private ArrayList burstBundle;
 	private ArrayList bloomBundle;
 	private ArrayList retroBundle;
+	private ArrayList rainbowBundle;
 
 
 	private TwitchParser commands;
@@ -57,6 +60,7 @@ public class FireworkPicker : MonoBehaviour {
 		burstBundle = new ArrayList();
 		bloomBundle = new ArrayList();
 		retroBundle = new ArrayList();
+		rainbowBundle = new ArrayList();
 	}
 
 	void Update()
@@ -91,6 +95,10 @@ public class FireworkPicker : MonoBehaviour {
 		else if(Input.GetAxis("Fire7")>0)
 		{
 			streamerCommand = new UserMessage("streamer","!fire", new string[] {retroText,"random","random"});
+		}
+		else if(Input.GetAxis("Fire8")>0)
+		{
+			streamerCommand = new UserMessage("streamer","!fire", rainbowText);
 		}
 		else
 		{
@@ -179,6 +187,9 @@ public class FireworkPicker : MonoBehaviour {
 				case retroText:
 					firework = GenerateRetroFirework(firstColor,secondColor);
 					break;
+				case rainbowText:
+					firework = GetFirework(rainbowText);
+					break;
 				default:
 					firework = GenerateBasicFirework(firstColor,secondColor);
 					break;
@@ -197,7 +208,7 @@ public class FireworkPicker : MonoBehaviour {
 		GameObject firework;
 		Color firstColor = ColorPicker.pickColor("random");
 		Color secondColor = ColorPicker.pickColor("random");
-		int randomInt = (int)(Random.value*7.0f);
+		int randomInt = (int)(Random.value*8.0f);
 		switch(randomInt)
 		{
 			case 0:
@@ -217,6 +228,9 @@ public class FireworkPicker : MonoBehaviour {
 				break;
 			case 5:
 				firework = GenerateRetroFirework(firstColor,secondColor);
+				break;
+			case 6:
+				firework = GetFirework(rainbowText);
 				break;
 			default:
 				firework = GenerateBasicFirework(firstColor,secondColor);
@@ -400,6 +414,10 @@ public class FireworkPicker : MonoBehaviour {
 		{
 			return (GameObject)retroBundle[getNextAvailable(retroBundle, type)];
 		}
+		else if(type.Equals(rainbowText))
+		{
+			return (GameObject)rainbowBundle[getNextAvailable(rainbowBundle, type)];
+		}
 		else
 		{
 			return null;
@@ -411,8 +429,24 @@ public class FireworkPicker : MonoBehaviour {
 		for(int i=0; i<bundle.Count;i++)
 		{
 			GameObject emitter = (GameObject)bundle[i];
-			if(!emitter.GetComponent<ParticleSystem>().IsAlive(true))
+			ParticleSystem particles = emitter.GetComponent<ParticleSystem>();
+			if(!particles.IsAlive(true))
 			{
+				if(particles.subEmitters.death0 != null)
+				{
+					if(particles.subEmitters.death0.IsAlive(true))
+					{
+						continue;
+					}
+				}
+				if(particles.subEmitters.death1 != null)
+				{
+					if(particles.subEmitters.death1.IsAlive(true))
+					{
+						continue;
+					}
+				}
+
 				return i;
 			}
 		}
@@ -448,6 +482,10 @@ public class FireworkPicker : MonoBehaviour {
 		else if(type.Equals(retroText))
 		{
 			newFirework = Instantiate(retro);
+		}
+		else if(type.Equals(rainbowText))
+		{
+			newFirework = Instantiate(rainbow);
 		}
 		else
 		{

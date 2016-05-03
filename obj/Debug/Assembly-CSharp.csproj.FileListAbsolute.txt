@@ -20,3 +20,25 @@ E:\Carl's Stuff\Projects\Picksies Fireworks\Temp\bin\Debug\UnityEngine.Networkin
 E:\Carl's Stuff\Projects\Picksies Fireworks\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 E:\Carl's Stuff\Projects\Picksies Fireworks\obj\Debug\Assembly-CSharp.dll
 E:\Carl's Stuff\Projects\Picksies Fireworks\obj\Debug\Assembly-CSharp.pdb
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\obj\Debug\Assembly-CSharp.dll
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\Assembly-CSharp.dll
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\Assembly-CSharp.pdb
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\UnityEditor.dll
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\UnityEngine.dll
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\UnityEngine.Networking.dll
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\UnityEngine.UI.dll
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\Mono.Cecil.dll
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\Unity.SerializationLogic.dll
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\Unity.DataContract.dll
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\Unity.UNetWeaver.dll
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\Unity.CecilTools.dll
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\Mono.Cecil.Pdb.dll
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\Mono.Cecil.Mdb.dll
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\UnityEngine.xml
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\UnityEditor.xml
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\UnityEngine.UI.xml
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\Temp\bin\Debug\UnityEngine.Networking.xml
+E:\Carl's Stuff\Projects\Picksies Fireworks Repo\obj\Debug\Assembly-CSharp.pdb
