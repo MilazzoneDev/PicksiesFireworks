@@ -2,12 +2,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FireworkPicker.cs">
     <Files>
-      <File FileName="Assets\Scripts\ScrollingViewer.cs" Line="36" Column="20" />
+      <File FileName="Assets\Scripts\FireworkPicker.cs" Line="149" Column="2" />
+      <File FileName="Assets\Scripts\ScrollingViewer.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ColorPicker.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\OptionsScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\FireworkLauncher.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\FireworkPicker.cs" Line="18" Column="2" />
-      <File FileName="Assets\IRC Scripts\TwitchIRCReader.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\FireworkLauncher.cs" Line="30" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

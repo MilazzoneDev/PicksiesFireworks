@@ -51,6 +51,15 @@
      <Compile Include="Assets\Scripts\ColorPicker.cs" />
      <Compile Include="Assets\Scripts\FireworkLauncher.cs" />
      <Compile Include="Assets\Scripts\FireworkPicker.cs" />
+     <Compile Include="Assets\Scripts\Fireworks\BasicFireworkBundle.cs" />
+     <Compile Include="Assets\Scripts\Fireworks\BloomFireworkBundle.cs" />
+     <Compile Include="Assets\Scripts\Fireworks\BurstFireworkBundle.cs" />
+     <Compile Include="Assets\Scripts\Fireworks\FireworkBundle.cs" />
+     <Compile Include="Assets\Scripts\Fireworks\RainbowFireworkBundle.cs" />
+     <Compile Include="Assets\Scripts\Fireworks\RetroFireworkBundle.cs" />
+     <Compile Include="Assets\Scripts\Fireworks\SparkleFireworkBundle.cs" />
+     <Compile Include="Assets\Scripts\Fireworks\TrailFireworkBundle.cs" />
+     <Compile Include="Assets\Scripts\Fireworks\UnityFireworkBundle.cs" />
      <Compile Include="Assets\Scripts\HighScoreController.cs" />
      <Compile Include="Assets\Scripts\OptionsScript.cs" />
      <Compile Include="Assets\Scripts\ScoreHolder.cs" />
